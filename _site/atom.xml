@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
- <title>Lanyon</title>
- <link href="http://lanyon.getpoole.com/atom.xml" rel="self"/>
- <link href="http://lanyon.getpoole.com/"/>
- <updated>2014-10-17T23:03:02-04:00</updated>
- <id>http://lanyon.getpoole.com</id>
+ <title>Sarah Griffis</title>
+ <link href="/atom.xml" rel="self"/>
+ <link href="/"/>
+ <updated>2014-10-19T18:49:13-04:00</updated>
+ <id></id>
  <author>
-   <name>Mark Otto</name>
-   <email>markdotto@gmail.com</email>
+   <name>Sarah Griffis</name>
+   <email>sgriff211@gmail.com</email>
  </author>
 
  
  <entry>
    <title>Hello World!</title>
-   <link href="http://lanyon.getpoole.com/2014/10/17/introductory-blog/"/>
+   <link href="/2014/10/17/introductory-blog/"/>
    <updated>2014-10-17T00:00:00-04:00</updated>
-   <id>http://lanyon.getpoole.com/2014/10/17/introductory-blog</id>
+   <id>/2014/10/17/introductory-blog</id>
    <content type="html">&lt;p&gt;Hello there. If you happen to be reading this, &lt;em&gt;GOOD FOR YOU!&lt;/em&gt; Somehow, you&amp;#39;ve found a wormhole in the universe and landed on this blog.
 You probably have a few questions.&lt;/p&gt;
 
