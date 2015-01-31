@@ -4,13 +4,60 @@
  <title>Sarah Griffis</title>
  <link href="/atom.xml" rel="self"/>
  <link href="/"/>
- <updated>2014-10-19T18:49:13-04:00</updated>
+ <updated>2015-01-30T20:43:33-05:00</updated>
  <id></id>
  <author>
    <name>Sarah Griffis</name>
    <email>sgriff211@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Web App 101</title>
+   <link href="/2015/01/30/web-app-101/"/>
+   <updated>2015-01-30T00:00:00-05:00</updated>
+   <id>/2015/01/30/web-app-101</id>
+   <content type="html">&lt;p&gt;Over the past few months, I&amp;#39;ve helped build two websites:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://chkntndr.com&quot;&gt;CHKNTNDR&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://ohhey.me&quot;&gt;OHHEY&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I figured I&amp;#39;d help a few people out, including myself, by recording my
+steps along the way.&lt;/p&gt;
+
+&lt;h3&gt;Setting up Git&lt;/h3&gt;
+
+&lt;p&gt;This is a &lt;em&gt;must&lt;/em&gt;.  Even if you&amp;#39;re coding solo, you&amp;#39;re inevitably going
+to want to look back at old versions of code. Or, more likely, you are
+going to f&amp;#39; something up and need to return to a previous version of
+code.  If you&amp;#39;re coding as a team, it&amp;#39;s how you&amp;#39;ll collaborate.&lt;/p&gt;
+
+&lt;p&gt;Here are the first steps to initializing a code base for a new web app:
+&lt;br&gt;
+&lt;small&gt;My web app is called &lt;em&gt;alist&lt;/em&gt;, you should fill in the name of
+your app accordingly.&lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;On GitHub:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Create a GitHub account&lt;/li&gt;
+&lt;li&gt;Create a new repository
+&lt;img src=&quot;/assets/new_repo.png&quot; alt=&quot;new repo&quot;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;On your terminal:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Run &amp;#39;rails new alist&amp;#39; to create your new rails app.&lt;/li&gt;
+&lt;li&gt;&amp;#39;Cd&amp;#39; into the alist directory. Run &amp;#39;git init&amp;#39; to initialize your new
+repo.&lt;/li&gt;
+&lt;li&gt;Add your remote repo (the repo on GitHub) by running &amp;#39;git remote add origin git@github.com:username/alist.git&amp;#39;&lt;/li&gt;
+&lt;li&gt;Push your blank rails app to GitHub with &amp;#39;git push origin master.&amp;#39;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Hello World!</title>

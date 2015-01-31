@@ -11,7 +11,7 @@
 
   <title>
     
-      About &middot; Sarah Griffis
+      Web App 101 &middot; Sarah Griffis
     
   </title>
 
@@ -59,7 +59,7 @@
     
       
         
-          <a class="sidebar-nav-item active" href="/about/">About</a>
+          <a class="sidebar-nav-item" href="/about/">About</a>
         
       
     
@@ -93,22 +93,65 @@
       </div>
 
       <div class="container content">
-        <div class="page">
-  <h1 class="page-title">About</h1>
-  <p class="message">
-  Who am I?
-</p>
+        <div class="post">
+  <h1 class="post-title">Web App 101</h1>
+  <span class="post-date">30 Jan 2015</span>
+  <p>Over the past few months, I&#39;ve helped build two websites:</p>
 
-<p>I am <em>not</em> a trained data scientist, back end web developer, front end web devloper, foodie, cosmopolitan, or curator of the arts.
-But I do love to work with numbers, enjoy a solid pizza, and find myself talking about music at least once a day.</p>
+<ul>
+<li><a href="http://chkntndr.com">CHKNTNDR</a></li>
+<li><a href="http://ohhey.me">OHHEY</a></li>
+</ul>
 
-<p class="message">
-  Professional Life
-</p>
+<p>I figured I&#39;d help a few people out, including myself, by recording my
+steps along the way.</p>
 
-<p>After studying engineering at Caltech, I worked as a pre-doctoral <a href="http://leap.fas.harvard.edu/">LEAP scholar at Harvard University</a>.
-I then transitioned to economic consulting at the Brattle Group.  Currently, I&#39;m a data engineer for <a href="https://www.paperlesspost.com/">Paperless Post</a>.</p>
+<h3>Setting up Git</h3>
 
+<p>This is a <em>must</em>.  Even if you&#39;re coding solo, you&#39;re inevitably going
+to want to look back at old versions of code. Or, more likely, you are
+going to f&#39; something up and need to return to a previous version of
+code.  If you&#39;re coding as a team, it&#39;s how you&#39;ll collaborate.</p>
+
+<p>Here are the first steps to initializing a code base for a new web app:
+<br>
+<small>My web app is called <em>alist</em>, you should fill in the name of
+your app accordingly.</small></p>
+
+<p>On GitHub:</p>
+
+<ul>
+<li>Create a GitHub account</li>
+<li>Create a new repository
+<img src="/assets/new_repo.png" alt="new repo"></li>
+</ul>
+
+<p>On your terminal:</p>
+
+<ul>
+<li>Run &#39;rails new alist&#39; to create your new rails app.</li>
+<li>&#39;Cd&#39; into the alist directory. Run &#39;git init&#39; to initialize your new
+repo.</li>
+<li>Add your remote repo (the repo on GitHub) by running &#39;git remote add origin git@github.com:username/alist.git&#39;</li>
+<li>Push your blank rails app to GitHub with &#39;git push origin master.&#39;</li>
+</ul>
+
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="//2014/10/17/introductory-blog/">
+            Hello World!
+            <small>17 Oct 2014</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
 </div>
 
       </div>
