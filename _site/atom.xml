@@ -4,13 +4,49 @@
  <title>Sarah Griffis</title>
  <link href="/atom.xml" rel="self"/>
  <link href="/"/>
- <updated>2015-01-30T20:43:33-05:00</updated>
+ <updated>2015-02-03T19:50:54-05:00</updated>
  <id></id>
  <author>
    <name>Sarah Griffis</name>
    <email>sgriff211@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Choosing Gems</title>
+   <link href="/2015/02/03/basic-rails/"/>
+   <updated>2015-02-03T00:00:00-05:00</updated>
+   <id>/2015/02/03/basic-rails</id>
+   <content type="html">&lt;p&gt;If you are familiar with any other programming language, you&amp;#39;ve probably come
+across the notion of packages (R), SSCs (STATA), or modules (Python). In Ruby, we
+have &lt;a href=&quot;https://rubygems.org/&quot;&gt;&lt;em&gt;Gems&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;You control which gems are added to your Rails app by added them to you Gemfile.
+Keep in mind you might want to keep some Gems out of your production environment, like
+debugging Gems such as pry-rails. Here&amp;#39;s a snippet of my Gemfile:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;group&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:production&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;unicorn&amp;#39;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;rails_12factor&amp;#39;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;newrelic_rpm&amp;#39;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;raygun4ruby&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;group&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:development&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;spring&amp;#39;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;better_errors&amp;#39;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;awesome_print&amp;#39;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;I highly recommend the &lt;a href=&quot;https://github.com/charliesome/better_errors&quot;&gt;better_errors&lt;/a&gt; Gem; it makes debugging a breeze with helpful out and
+a console to work directly from on the page.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/better_errors.jpg&quot; alt=&quot;better_errors&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;You can find Gems to handle pagination, votability, APIs, and a ton of other helpful things.
+A few of my production Gems are needed for hosting a web app on Heroku, more on this later!&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Web App 101</title>
