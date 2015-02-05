@@ -4,13 +4,47 @@
  <title>Sarah Griffis</title>
  <link href="/atom.xml" rel="self"/>
  <link href="/"/>
- <updated>2015-02-03T19:50:54-05:00</updated>
+ <updated>2015-02-04T21:21:05-05:00</updated>
  <id></id>
  <author>
    <name>Sarah Griffis</name>
    <email>sgriff211@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Models, and Views, and Controllers! Oh My!</title>
+   <link href="/2015/02/04/models-and-views-and-controllers-oh-my/"/>
+   <updated>2015-02-04T00:00:00-05:00</updated>
+   <id>/2015/02/04/models-and-views-and-controllers-oh-my</id>
+   <content type="html">&lt;h3&gt;MVC&lt;/h3&gt;
+
+&lt;p&gt;So how does a web app work anyways?  Basically, your &lt;em&gt;model&lt;/em&gt; is your data.
+Your &lt;em&gt;view&lt;/em&gt; is what the user sees.  And your &lt;em&gt;controller&lt;/em&gt; controls your data,
+both from your web app to your view (what your user sees and interacts with) and
+from your view to your model. MVC.&lt;/p&gt;
+
+&lt;h3&gt;Homepage Controller&lt;/h3&gt;
+
+&lt;p&gt;After you&amp;#39;ve run &lt;a href=&quot;/2015/01/30/web-app-101/&quot;&gt;Rails new&lt;/a&gt;, try to run
+&lt;code&gt;rails s&lt;/code&gt; on the command line from the directory of your app.  Then navigate to
+&lt;code&gt;http://localhost:3000/&lt;/code&gt; in your browser.  You&amp;#39;ll see an error.  This is because
+we haven&amp;#39;t told our app the &lt;em&gt;route&lt;/em&gt; of our home page; that is, we need to tell our
+app what the first controller action should do. Here are the steps to step up your homepage:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In &lt;strong&gt;config/routes&lt;/strong&gt;, create a root_path.  E.g., &lt;code&gt;root &amp;#39;welcome#index&amp;#39;&lt;/code&gt;.  This will route
+our homepage to the welcome controller, index action.&lt;/li&gt;
+&lt;li&gt;In your &lt;strong&gt;app/views&lt;/strong&gt; folder, create a &lt;strong&gt;welcome&lt;/strong&gt; folder and a &lt;strong&gt;index.html.haml&lt;/strong&gt; file.
+The welcome folder will host the view for the welcome controller.  The index.html.haml file
+will host all of the homepage content.&lt;/li&gt;
+&lt;li&gt;You can write standard HTML in the haml file, but haml also has some amazing capabilities
+to interact with ruby.  &lt;a href=&quot;http://haml.info/&quot;&gt;Haml&lt;/a&gt; is awesome!&lt;/li&gt;
+&lt;li&gt;Run &lt;code&gt;rails s&lt;/code&gt; from the command line and go to localhost:3000. Do you see the content from
+the index.html.haml file?!&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Choosing Gems</title>
