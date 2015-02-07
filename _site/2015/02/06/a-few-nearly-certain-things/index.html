@@ -11,7 +11,7 @@
 
   <title>
     
-      Sarah Griffis &middot; 
+      You'll Almost Always Do These Steps &middot; Sarah Griffis
     
   </title>
 
@@ -43,7 +43,7 @@
   </div>
 
   <nav class="sidebar-nav">
-    <a class="sidebar-nav-item active" href="/">Home</a>
+    <a class="sidebar-nav-item" href="/">Home</a>
 
     
 
@@ -93,18 +93,10 @@
       </div>
 
       <div class="container content">
-        <div class="posts">
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/2015/02/06/a-few-nearly-certain-things/">
-        You'll Almost Always Do These Steps
-      </a>
-    </h1>
-
-    <span class="post-date">06 Feb 2015</span>
-
-    <p>Just a quick re-cap on MVC:</p>
+        <div class="post">
+  <h1 class="post-title">You'll Almost Always Do These Steps</h1>
+  <span class="post-date">06 Feb 2015</span>
+  <p>Just a quick re-cap on MVC:</p>
 
 <h3>MVC</h3>
 
@@ -179,185 +171,41 @@ you might find useful:</p>
 <li><code>rake db:seed</code> - seed the database with fake data.</li>
 </ul>
 
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/2015/02/04/models-and-views-and-controllers-oh-my/">
-        Models, and Views, and Controllers! Oh My!
-      </a>
-    </h1>
-
-    <span class="post-date">04 Feb 2015</span>
-
-    <h3>MVC</h3>
-
-<p>So how does a web app work anyways?  Basically, your <em>model</em> is your data.
-Your <em>view</em> is what the user sees.  And your <em>controller</em> controls your data,
-both from your web app to your view (what your user sees and interacts with) and
-from your view to your model. MVC.</p>
-
-<h3>Homepage Controller</h3>
-
-<p>After you&#39;ve run <a href="/2015/01/30/web-app-101/">Rails new</a>, try to run
-<code>rails s</code> on the command line from the directory of your app.  Then navigate to
-<code>http://localhost:3000/</code> in your browser.  You&#39;ll see an error.  This is because
-we haven&#39;t told our app the <em>route</em> of our home page; that is, we need to tell our
-app what the first controller action should do. Here are the steps to step up your homepage:</p>
-
-<ul>
-<li>In <strong>config/routes</strong>, create a root_path.  E.g., <code>root &#39;welcome#index&#39;</code>.  This will route
-our homepage to the welcome controller, index action.</li>
-<li>In your <strong>app/views</strong> folder, create a <strong>welcome</strong> folder and a <strong>index.html.haml</strong> file.
-The welcome folder will host the view for the welcome controller.  The index.html.haml file
-will host all of the homepage content.</li>
-<li>You can write standard HTML in the haml file, but haml also has some amazing capabilities
-to interact with ruby.  <a href="http://haml.info/">Haml</a> is awesome!</li>
-<li>Run <code>rails s</code> from the command line and go to localhost:3000. Do you see the content from
-the index.html.haml file?!</li>
-</ul>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/2015/02/03/basic-rails/">
-        Choosing Gems
-      </a>
-    </h1>
-
-    <span class="post-date">03 Feb 2015</span>
-
-    <p>If you are familiar with any other programming language, you&#39;ve probably come
-across the notion of packages (R), SSCs (STATA), or modules (Python). In Ruby, we
-have <a href="https://rubygems.org/"><em>Gems</em></a>.</p>
-
-<p>You control which gems are added to your Rails app by added them to you Gemfile.
-Keep in mind you might want to keep some Gems out of your production environment, like
-debugging Gems such as pry-rails. Here&#39;s a snippet of my Gemfile:</p>
-
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">group</span> <span class="ss">:production</span> <span class="k">do</span>
-  <span class="n">gem</span> <span class="s1">&#39;unicorn&#39;</span>
-  <span class="n">gem</span> <span class="s1">&#39;rails_12factor&#39;</span>
-  <span class="n">gem</span> <span class="s1">&#39;newrelic_rpm&#39;</span>
-  <span class="n">gem</span> <span class="s1">&#39;raygun4ruby&#39;</span>
-<span class="k">end</span>
-
-<span class="n">group</span> <span class="ss">:development</span> <span class="k">do</span>
-  <span class="n">gem</span> <span class="s1">&#39;spring&#39;</span>
-  <span class="n">gem</span> <span class="s1">&#39;better_errors&#39;</span>
-  <span class="n">gem</span> <span class="s1">&#39;awesome_print&#39;</span>
-  <span class="k">end</span></code></pre></div>
-
-<p>I highly recommend the <a href="https://github.com/charliesome/better_errors">better_errors</a> Gem; it makes debugging a breeze with helpful out and
-a console to work directly from on the page.</p>
-
-<p><img src="/assets/better_errors.jpg" alt="better_errors"></p>
-
-<p>You can find Gems to handle pagination, votability, APIs, and a ton of other helpful things.
-A few of my production Gems are needed for hosting a web app on Heroku, more on this later!</p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/2015/01/30/web-app-101/">
-        Web App 101
-      </a>
-    </h1>
-
-    <span class="post-date">30 Jan 2015</span>
-
-    <p>Over the past few months, I&#39;ve helped build two websites:</p>
-
-<ul>
-<li><a href="http://chkntndr.com">CHKNTNDR</a></li>
-<li><a href="http://ohhey.me">OHHEY</a></li>
-</ul>
-
-<p>I figured I&#39;d help a few people out, including myself, by recording my
-steps along the way.</p>
-
-<h3>Setting up Git</h3>
-
-<p>This is a <em>must</em>.  Even if you&#39;re coding solo, you&#39;re inevitably going
-to want to look back at old versions of code. Or, more likely, you are
-going to f&#39; something up and need to return to a previous version of
-code.  If you&#39;re coding as a team, it&#39;s how you&#39;ll collaborate.</p>
-
-<p>Here are the first steps to initializing a code base for a new web app:
-<br>
-<small>My web app is called <em>alist</em>, you should fill in the name of
-your app accordingly.</small></p>
-
-<p>On GitHub:</p>
-
-<ul>
-<li>Create a GitHub account</li>
-<li>Create a new repository
-<img src="/assets/new_repo.png" alt="new repo"></li>
-</ul>
-
-<p>On your terminal:</p>
-
-<ul>
-<li>Run &#39;rails new alist&#39; to create your new rails app.</li>
-<li>&#39;Cd&#39; into the alist directory. Run &#39;git init&#39; to initialize your new
-repo.</li>
-<li>Add your remote repo (the repo on GitHub) by running &#39;git remote add origin git@github.com:username/alist.git&#39;</li>
-<li>Push your blank rails app to GitHub with &#39;git push origin master.&#39;</li>
-</ul>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/2014/10/17/introductory-blog/">
-        Hello World!
-      </a>
-    </h1>
-
-    <span class="post-date">17 Oct 2014</span>
-
-    <p>Hello there. If you happen to be reading this, <em>GOOD FOR YOU!</em> Somehow, you&#39;ve found a wormhole in the universe and landed on this blog.
-You probably have a few questions.</p>
-
-<h3>Who are you?</h3>
-
-<p>Well, I&#39;m Sarah.  I like to:</p>
-
-<ul>
-<li>eat</li>
-<li>drink coffee</li>
-<li>play with big dogs</li>
-<li>code in Python, Ruby (learning!), R</li>
-</ul>
-
-<p>I live in Brooklyn, but I&#39;m from Indiana.  I&#39;m currently on an Amtrak train to Washington, DC.</p>
-
-<h3>What are you going to write about?</h3>
-
-<p>Great question.  Maybe food?  Maybe coffee shops?
-Maybe dogs?  Probably coding?  Possibly all of the above?</p>
-
-<p>I&#39;m trying out several different blogging systems.
-Right now, I&#39;m working with a Jekyll theme called <a href="https://github.com/poole/lanyon#readme">Lanyon</a>.</p>
-
-<p>Thanks for reading!</p>
-
-  </div>
-  
 </div>
 
-<div class="pagination">
-  
-    <span class="pagination-item older">Older</span>
-  
-  
-    <span class="pagination-item newer">Newer</span>
-  
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="//2015/02/04/models-and-views-and-controllers-oh-my/">
+            Models, and Views, and Controllers! Oh My!
+            <small>04 Feb 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="//2015/02/03/basic-rails/">
+            Choosing Gems
+            <small>03 Feb 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="//2015/01/30/web-app-101/">
+            Web App 101
+            <small>30 Jan 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
 </div>
-
 
       </div>
     </div>

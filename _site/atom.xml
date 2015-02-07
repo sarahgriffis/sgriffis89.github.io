@@ -4,13 +4,95 @@
  <title>Sarah Griffis</title>
  <link href="/atom.xml" rel="self"/>
  <link href="/"/>
- <updated>2015-02-04T21:21:05-05:00</updated>
+ <updated>2015-02-06T21:21:59-05:00</updated>
  <id></id>
  <author>
    <name>Sarah Griffis</name>
    <email>sgriff211@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>You'll Almost Always Do These Steps</title>
+   <link href="/2015/02/06/a-few-nearly-certain-things/"/>
+   <updated>2015-02-06T00:00:00-05:00</updated>
+   <id>/2015/02/06/a-few-nearly-certain-things</id>
+   <content type="html">&lt;p&gt;Just a quick re-cap on MVC:&lt;/p&gt;
+
+&lt;h3&gt;MVC&lt;/h3&gt;
+
+&lt;p&gt;So how does a web app work anyways?  Basically, your &lt;em&gt;model&lt;/em&gt; is your data.
+Your &lt;em&gt;view&lt;/em&gt; is what the user sees.  And your &lt;em&gt;controller&lt;/em&gt; controls your data,
+both from your web app to your view (what your user sees and interacts with) and
+from your view to your model. MVC.&lt;/p&gt;
+
+&lt;h3&gt;The Rails App Recipe&lt;/h3&gt;
+
+&lt;p&gt;In almost every project you are going to want to do a few things.  Namely:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Application.html.haml&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2&quot;&gt;Forms&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3&quot;&gt;User model&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#4&quot;&gt;Rake commands&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;&lt;a name=&#39;1&#39;&gt;&lt;/a&gt;Application.html.haml&lt;/h3&gt;
+
+&lt;p&gt;Want to use bootstrap for responsive design?  Flat-UI for a beautifully clean webpage?
+d3.js? Google plugins?&lt;/p&gt;
+
+&lt;p&gt;Some of these things you can add as gems, but more often than not it is easiest to add
+these things in your &lt;code&gt;app/views/layouts/application.html.haml&lt;/code&gt; file.  This file contains the
+code that will be run in every page of your application.  Near the top of this file (it should
+have been generated automatically when you ran &lt;code&gt;rails new&lt;/code&gt;) you should be able to add files like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stylesheet_link_tag&lt;/span&gt;    &lt;span class=&quot;s1&quot;&gt;&amp;#39;https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css&amp;#39;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stylesheet_link_tag&lt;/span&gt;    &lt;span class=&quot;s1&quot;&gt;&amp;#39;http://fonts.googleapis.com/css?family=Lato&amp;#39;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stylesheet_link_tag&lt;/span&gt;    &lt;span class=&quot;s1&quot;&gt;&amp;#39;https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css&amp;#39;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stylesheet_link_tag&lt;/span&gt;    &lt;span class=&quot;s1&quot;&gt;&amp;#39;application&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;media&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;all&amp;#39;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;javascript_include_tag&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;https://maps.googleapis.com/maps/api/js?sensor=false&amp;#39;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;javascript_include_tag&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;application&amp;#39;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;javascript_include_tag&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Do you see the &lt;code&gt;= yield&lt;/code&gt; part of this file?  This is where the rest of your views will be rendered!  You can
+add a footer and a header on application.html.haml that will persist across all pages of your app.  More on
+that later.&lt;/p&gt;
+
+&lt;h3&gt;&lt;a name=&#39;2&#39;&gt;&lt;/a&gt;Using forms&lt;/h3&gt;
+
+&lt;p&gt;Forms allow users to input data to your webapp.  This may be as simple as entering an email address to super
+complicated date, dropdown, radio button, etc. forms.  Simple form is a great tool for using forms in
+Rails.  You can install it with bootstrap responsiveness using this command: &lt;code&gt;rails g simple_form:install --bootstrap.&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3&gt;&lt;a name=&#39;3&#39;&gt;&lt;/a&gt;User model&lt;/h3&gt;
+
+&lt;p&gt;You&amp;#39;ll probably want to keep track of your users.  To create a user model we need to run a Rails &lt;em&gt;migration&lt;/em&gt;.  But before
+we get to migrations, let&amp;#39;s talk about models a bit more.  Remember, models are the data in your app.  Generally, a model
+will correspond to a database table.  So, when we are determing our models, we need to determine what attributes we want
+to keep track of on our database table and if we would like to restrict any of these attributes.  Let&amp;#39;s create a simple User
+model where we only want to keep track of the user&amp;#39;s email address.  We will run &lt;code&gt;Rails g model User email:string&lt;/code&gt;.  Which says &amp;#39;Rails,
+generate a model called User that has a property of email, which is a string.&amp;#39;  This command will generate a &lt;em&gt;migration&lt;/em&gt; file,
+modify our schema.db, and create a file as &lt;code&gt;app/models/user.rb&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Here&amp;#39;s a bit of bonus information.  Let&amp;#39;s say we want to have a page that lists all of our users.  This means we want to
+have an &lt;em&gt;index&lt;/em&gt; of our User model.  We need a User controller, index action.  Rails can create this for us, too!  We should run
+&lt;code&gt;Rails g controller User index&lt;/code&gt;.  Which says &amp;#39;Rails generate a controller called User that has the action index.&amp;#39;  We will get
+a route in the &lt;code&gt;config/routes.rb&lt;/code&gt; and file &lt;code&gt;app/controllers/users_controller.rb&lt;/code&gt;.  &lt;strong&gt;Note that the model is singular (User) while
+the controller (Users Controller) is plural.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3&gt;&lt;a name=&#39;4&#39;&gt;&lt;/a&gt;Rake Commands&lt;/h3&gt;
+
+&lt;p&gt;After you run a migration, you&amp;#39;ll need to tell your database to use it.  You should run &lt;code&gt;rake db:migrate&lt;/code&gt;.  A few other commands
+you might find useful:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;rake db:drop&lt;/code&gt; - drop the database.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rake db:create&lt;/code&gt; - create the database. You&amp;#39;ll need to do this if you want to use postgres in development.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rake db:seed&lt;/code&gt; - seed the database with fake data.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Models, and Views, and Controllers! Oh My!</title>
